@@ -128,7 +128,9 @@ int main()
 		printf("Escolha a opção desejada do MENU:\n\n");
 		printf("\t1 - Registrar nomes\n"); // o simbolo /t são os espaços horizontais
 		printf("\t2 - Consultar nomes\n");
-		printf("\t3 - Deletar nomes\n\n\n"); // Essa linha é o Fim do MENU.
+		printf("\t3 - Deletar nomes\n"); // Essa linha é o Fim do MENU.
+		printf("\t4 - Sair do sistema\n\n\n"); // Essa linha é o Fim do MENU.
+
 		printf("Opção: ");
 		
 		scanf("%d", &opcao); // Aqui escanear e armazena a escolha do usuário.  Para armazenar uma variave do tipo inteiro, usa o "%d". O "&opcao" é a variavel atribuida no inicio do codigo. Aqui no "scanf" o programa fica pausado aguardado intrução do usuário.
@@ -148,6 +150,10 @@ int main()
 			case 3:
 			deletar();
 			break;
+			
+			case 4:
+			printf("Obrigado por usar o sistema \n");
+			return 0; // Quebra `a função zero. Quebro laço, função e etc e retorna do zero saindo do sistema
 			
 			default:
 			printf("Opcao inválida!\n");
